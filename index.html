@@ -1,50 +1,61 @@
-<form id="dinner-form">
-  <label for="name">Partner's Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="date">Date:</label>
-  <input type="date" id="date" name="date" required>
-
-  <label for="time">Time:</label>
-  <input type="time" id="time" name="time" required>
-
-  <label for="location">Location:</label>
-  <input type="text" id="location" name="location" required>
-
-  <label for="message">Special Message:</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Send Invitation</button>
-</form>
-
-<script>
-  document.getElementById('dinner-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      date: form.date.value,
-      time: form.time.value,
-      location: form.location.value,
-      message: form.message.value,
-    };
-
-    try {
-      const response = await fetch('https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxxxxxxxx/exec', {
-        method: 'POST',
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        alert('Invitation successfully sent!');
-        form.reset();
-      } else {
-        alert('Failed to send invitation. Please try again.');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="dinner-form">
+    <label for="name">Partner's Name:</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+  
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required>
+  
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+  
+    <label for="message">Special Message:</label>
+    <textarea id="message" name="message" required></textarea>
+  
+    <button type="submit">Send Invitation</button>
+  </form>
+  
+  <script>
+    document.getElementById('dinner-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+  
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        date: form.date.value,
+        time: form.time.value,
+        location: form.location.value,
+        message: form.message.value,
+      };
+  
+      try {
+        const response = await fetch('https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxxxxxxxx/exec', {
+          method: 'POST',
+          body: JSON.stringify(data),
+        });
+  
+        if (response.ok) {
+          alert('Invitation successfully sent!');
+          form.reset();
+        } else {
+          alert('Failed to send invitation. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while sending the invitation.');
       }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred while sending the invitation.');
-    }
-  });
-</script>
+    });
+  </script>  
+</body>
+</html>
