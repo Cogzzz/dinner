@@ -70,4 +70,8 @@ body {
   .card:active {
     transform: scale(0.98);
   }
-  
+
+  .huh {
+    width: 200px;
+    margin-bottom: 20px;
+  }
