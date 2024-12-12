@@ -32,7 +32,7 @@
   }
 
   .bunny {
-    width: 180px;
+    width: 150px;
     margin-bottom: 20px;
   }
 
@@ -177,5 +177,4 @@ button {
 button:hover {
   background-color: #ff6b6b;
   color: #fff;
-  box-shadow: var(--box-shadow);
 }
