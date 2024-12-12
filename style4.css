@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #f4e6da;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --main-color:#bc9967;
+  --second-color:#e1be6e; 
+  --text-color:#1b1b1b;
+  --bg-color:#fff;
+  --box-shadow : 2px 2px 10px 4px rgb(14 55 54 /15% )
+}
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #fff8f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Container Styling */
+  .container {
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-family:'lora';
+    font-size:2rem;
+    color: #ff6b6b;
+  }
+  
+  /* Button Styling */
+  .buttons {
+    margin: 20px 0;
+  }
+  
+  button {
+    background-color: #ffc1c1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    color: #333;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    font-family: 'Josefin';
+  }
+  
+  button:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+  
+.cry {
+    margin-top: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+}

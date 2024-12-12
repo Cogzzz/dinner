@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Where Do You Wanna Go? 🦦</h1>
+    <img src="asset/bunny-cute.gif" alt="Bunny" class="bunny">
+    <div class="container">
+      <div class="card" onclick="openModal('video1.mp4')">
+        <img src="asset/socialite.jpg" alt="Socialite">
+        <div class="intro">
+          <h2>Socialite</h2>
+          <p><span>Socialite</span> ...</p>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('video2.mp4')">
+        <img src="asset/stjerne.webp" alt="Stjerne">
+        <div class="intro">
+          <h2>Stjerene</h2>
+          <p><span>Stjerene</span> ...</p>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('video3.mp4')">
+        <img src="asset/confit.jpg" alt="Confit">
+        <div class="intro">
+          <h2>Confit</h2>
+          <p><span>Confit</span> ...</p>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('video4.mp4')">
+        <img src="asset/higa.jpeg" alt="Higa">
+        <div class="intro">
+          <h2>Higa</h2>
+          <p><span>Socialite</span> ...</p>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('video5.mp4')">
+        <img src="asset/ciccia.jpeg" alt="Ciccia">
+        <div class="intro">
+          <h2>Ciccia</h2>
+          <p><span>Socialite</span> ...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video id="modalVideo" controls>
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <button onclick="redirectToPage()">Sooo?</button>
+
+    <script>
+      function openModal(videoSrc) {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('modalVideo');
+        video.src = 'asset/' + videoSrc;
+        modal.style.display = 'block';
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('modalVideo');
+        video.pause(); 
+        video.src = '';
+        modal.style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+        const modal = document.getElementById('videoModal');
+        if (event.target === modal) {
+          closeModal();
+        }
+      }
+
+      function redirectToPage() {
+        window.location.href = "page4.html";
+    }
+    </script>
+</body>
+</html>

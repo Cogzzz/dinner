@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  background-color: #f4e6da;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -27,7 +28,7 @@ body {
   
   /* Container Styling */
   .container {
-    margin-top: 10%;
+    margin-top: 80px;
     padding: 20px;
   }
   
@@ -54,11 +55,13 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #333;
     cursor: pointer;
     margin: 5px;
     transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    font-family: 'Josefin';
   }
   
   button:hover {

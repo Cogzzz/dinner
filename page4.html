@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Restoran</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Jadinyaah Mauuu Yangg Manah?? </h1>
+    <div class="container">
+        <div class="card-container">
+            <div class="card" onclick="selectRestaurant('Restoran Socialite')">
+                <img src="asset/socialite.jpg" alt="Socialite">
+                <div class="intro">
+                  <h2>Socialite</h2>
+                  <p><span>Socialite</span> ...</p>
+                </div>
+              </div>
+              <div class="card" onclick="selectRestaurant('Restoran Stjerene')">
+                <img src="asset/stjerne.webp" alt="Stjerne">
+                <div class="intro">
+                  <h2>Stjerene</h2>
+                  <p><span>Stjerene</span> ...</p>
+                </div>
+              </div>
+              <div class="card" onclick="selectRestaurant('Restoran Confit')">
+                <img src="asset/confit.jpg" alt="Confit">
+                <div class="intro">
+                  <h2>Confit</h2>
+                  <p><span>Confit</span> ...</p>
+                </div>
+              </div>
+              <div class="card" onclick="selectRestaurant('Restoran Higa')">
+                <img src="asset/higa.jpeg" alt="Higa">
+                <div class="intro">
+                  <h2>Higa</h2>
+                  <p><span>Socialite</span> ...</p>
+                </div>
+              </div>
+              <div class="card" onclick="selectRestaurant('Restoran Ciccia')">
+                <img src="asset/ciccia.jpeg" alt="Ciccia">
+                <div class="intro">
+                  <h2>Ciccia</h2>
+                  <p><span>Socialite</span> ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script>
+    function selectRestaurant(restaurantName) {
+      alert("Ogeyyy Bubbb pilih " + restaurantName + " yaaa!! 😋 ");
+      window.location.href = "page5.html";
+    }
+  </script>
+</body>
+</html>
